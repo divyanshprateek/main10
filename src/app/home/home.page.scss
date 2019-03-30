@@ -1,0 +1,125 @@
+.box {
+    height: 6rem;
+    width: auto;
+    border-top: 2px solid rgb(8, 175, 164);
+    border-left: 2px solid rgb(8, 175, 164);
+    border-right: 2px solid rgb(8, 175, 164);
+    border-bottom: 2px solid rgb(8, 175, 164);
+    border-radius: 5px;
+}
+
+.set {
+    //object-fit: cover;
+    height: 80%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+.car {
+    height: 80px;
+    width: 100px;
+}
+
+.large {
+    height: 50vh;
+}
+
+.gap {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.round {
+    border-radius: 20px;
+    height: 6rem;
+}
+
+.adjust {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    // object-fit: fill;
+}
+
+.resize {
+    height: 100vh;
+    width: 100vh;
+}
+
+.row-box {
+    margin: 10px;
+}
+
+// ion-toolbar {
+//     --padding-top: 0%;
+// }
+
+.box-1 {
+    margin-right: 5px;
+}
+
+.box-2 {
+    margin-right: 5px;
+}
+
+.box-3 {
+    margin-right: 5px;
+}
+
+.banner {
+    border-radius: 20px;
+    height: 10rem;
+}
+
+.round-1 {
+    border-radius: 20px;
+    height: 5rem;
+}
+
+.my-icon {
+    height: 80rem;
+    width: 80rem;
+}
+
+.img-container {
+    background-size: cover;
+    min-height: 100px;
+}
+
+.text {
+    margin-left: 0.1rem;
+    font-size: 0.47rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.main-img-control {
+    //object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    display: block;
+}
+
+.border {
+    border-top: 2px solid rgb(140, 228, 222);
+    border-left: 2px solid rgb(140, 228, 222);
+    border-right: 2px solid rgb(140, 228, 222);
+    border-bottom: 2px solid rgb(140, 228, 222);
+    border-radius: 5px;
+    height: 7rem;
+    width: auto;
+}
+
+.mar {
+    margin-right: 0.7rem;
+}
+table {
+    height: 20%;
+}

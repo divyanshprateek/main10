@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-toolbar class="toolbar-size toolbar-container" color="primary">
+    <ion-searchbar placeholder="Main 10" class="search-width">
+      <ion-buttons slot="start" color="white">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button icon-only>
+        <ion-icon name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-slides autoplay="1000" pager="true" class="gap">
+    <ion-slide *ngFor="let i of [1,2,3,4]" class="round">
+      <img src="../assets/imgs/{{ i }}.jpg" class="adjust" alt="">
+    </ion-slide>
+  </ion-slides>
+  <div>
+    <div>
+      <ion-grid>
+        <ion-row class="row-box">
+          <ion-col class="box box-1">
+            <img src="../assets/imgs/early.jpg" class="set" />
+            <span class="text">Early Morning</span>
+          </ion-col>
+          <ion-col class="box box-2">
+            <img class="car" src="../assets/imgs/dailyveg.jpg" class="set" />
+            <span class="text">Daily Veg</span>
+          </ion-col>
+          <ion-col class="box box-3">
+            <img src="../assets/imgs/dailynonveg.jpg" class="set" />
+            <span class="text">Daily Non-Veg</span>
+          </ion-col>
+          <ion-col class="box">
+            <img src="../assets/imgs/grossary.jpg" class="set" />
+            <span class="text">Grossary</span>
+          </ion-col>
+        </ion-row>
+        <ion-row class="row-box">
+          <ion-col size="3" class="box">
+            <img src="../assets/imgs/medicine.jpg" class="set" />
+            <span class="text">Medicine</span>
+          </ion-col>
+          <ion-col size="6" class="box">
+            <img src="../assets/imgs/main2.jpg" class="main-img-control" />
+          </ion-col>
+          <ion-col size="3" class="box">
+            <img src="../assets/imgs/laundry.jpg" class="set" />
+            <span class="text">Laundry</span>
+          </ion-col>
+        </ion-row>
+        <ion-row class="row-box">
+          <ion-col class="box box-1 ">
+            <img src="../assets/imgs/clean.jpg" class="set" />
+            <span class="text">Home Cleaning</span>
+          </ion-col>
+          <ion-col class="box box-2 ">
+            <img src="../assets/imgs/maintain.jpg" class="set" />
+            <span class="text">Home Services</span>
+          </ion-col>
+          <ion-col class="box box-3 ">
+            <img src="../assets/imgs/carwash.jpg" class="set" />
+            <span class="text">Vehicle Services</span>
+          </ion-col>
+          <ion-col class="box">
+            <img src="../assets/imgs/alcohol.jpg" class="set" />
+            <span class="text">Alcohol/Smoke</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <ion-slides autoplay="1000" pager="true" class="gap">
+    <ion-slide *ngFor="let i of [1,2,3,4]" class="round-1">
+      <img src="../assets/imgs/retail.jpg" alt="" class="adjust">
+    </ion-slide>
+  </ion-slides>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="border mar">
+
+      </ion-col>
+      <ion-col class="border">
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="border" style="background-image: url('../assets/imgs/menu-img.jpg'); 
+      background-size: cover; width: 100%;">
+         <h1 align="center" style="color: white; font-family: cursive">Life Republic Social</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <ion-card-header tappable (click)="collapseCard = !collapseCard">
+      <ion-card-title>New Event</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="!collapseCard">
+ 
+      <ion-item>
+        <ion-input type="text" placeholder="Title" [(ngModel)]="event.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Description" [(ngModel)]="event.desc"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Start</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>All Day?</ion-label>
+        <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>
+      </ion-item>
+      <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Add Event</ion-button>
+ 
+    </ion-card-content>
+  </ion-card>
+ 
+  <ion-row>
+    <!-- Change the displayed calendar mode -->
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'" (click)="changeMode('month')">Month</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'week' ? 'primary' : 'secondary'" (click)="changeMode('week')">Week</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">Day</ion-button>
+    </ion-col>
+ 
+    <!-- Move back one screen of the slides -->
+    <ion-col size="6" text-left>
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+ 
+    <!-- Move forward one screen of the slides -->
+    <ion-col size="6" text-right>
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+ 
+    <calendar 
+    [eventSource]="eventSource" 
+    [calendarMode]="calendar.mode" 
+    [currentDate]="calendar.currentDate"
+    (onEventSelected)="onEventSelected($event)"
+    (onTitleChanged)="onViewTitleChanged($event)"
+    (onTimeSelected)="onTimeSelected($event)" 
+    startHour="6"
+    endHour="20"
+    step="30"
+    startingDayWeek="1">
+    </calendar>
+
+ 
+ 
+</ion-content>
