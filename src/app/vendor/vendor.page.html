@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>vendor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="trip card" margin-bottom>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-avatar>
+                <img class="avatar" src="../assets/imgs/avatar.png">
+              </ion-avatar>
+            </ion-col>
+            <ion-col padding>
+              <p>Mr. Abhijeet Kumar</p>
+              <p>+91 9102012903</p>
+              <p>ashabs18@gmail.com</p>
+              <p>R7, D1705, Life Republic, Marunji</p>
+              <div class="button-group">
+                <ion-button size="small" color="primary">Edit</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div>
+          <h1 text-center>Bharat fresh Mart</h1>
+        </div>
+        <div>
+          <ion-button color="secondary" fill="outline">Start Service</ion-button>
+          <ion-button color="danger">Stop Service</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div>
+    <ion-button fill="outline" color="secondary" expand="block">
+      Services
+      <ion-icon name="arrow-dropdown" slot="end"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <h1>Slide 1</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+</ion-content>

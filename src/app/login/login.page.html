@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="theme">
+  <div class="area">
+    <form>
+      <ion-item class="email" >
+        <ion-label>
+          <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+        </ion-label>
+        <ion-input type="email" id="email" type="text" required placeholder="Email *"></ion-input>
+      </ion-item>
+      <ion-item class="password">
+        <ion-label>
+          <ion-icon ios="ios-unlock" md="md-unlock"></ion-icon>
+        </ion-label>
+        <ion-input type="password" id="password" type="{{passwordtype}}" required placeholder="Password *"></ion-input>
+        <ion-button expand="block">
+          <ion-icon name="eye"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-button class="signin" color="primary">Sign In</ion-button>
+    </form>
+  </div>
+
+</ion-content>

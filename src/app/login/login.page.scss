@@ -1,0 +1,41 @@
+.theme {
+    background: #098DF4;
+    background-image: linear-gradient(to bottom right, #098DF4, #098DF4);
+}
+
+ion-content{
+    --background: linear-gradient(to bottom right, #0B2D9E, #08F0A6);
+}
+
+.area {
+    position: fixed;
+    bottom: 20%;
+    margin-left: 6%;
+    width: 80%;
+}
+ion-button.signin {
+    position: absolute;
+    left: 18%;
+    bottom: -10%;
+    width: 60%;
+}
+
+.list-md {
+    background: none;
+}
+
+form {
+    width: 100%;
+}
+
+ion-item.email {
+    --border-radius: 5px 5px 0px 0px;
+    --padding-top: 2%;
+    --padding-bottom: 2%;
+}
+
+ion-item.password {
+    --border-radius: 0px 0px 5px 5px;
+    --padding-top: 2%;
+    --padding-bottom: 8%;
+}

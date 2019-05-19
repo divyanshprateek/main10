@@ -1,0 +1,38 @@
+.main-content {
+    position: fixed;
+    bottom: 5%;
+    margin-left: 10%;
+    width: 80%;
+}
+
+ion-item.address {
+    --padding-top: 5%;
+}
+
+ion-content{
+    --background: linear-gradient(to bottom right, #0B2D9E, #08F0A6);
+}
+
+ion-textarea {
+    --padding-top: 25%;
+}
+
+.title {
+    color: #fff;
+    margin: 0%;
+}
+
+.curve {
+    border-radius: 5px;
+}
+
+ion-item.last_child {
+  --padding-bottom: 8%;
+}
+
+ion-button.signup {
+    position: absolute;
+    left: 18%;
+    bottom: -2px;
+    width: 60%;
+}

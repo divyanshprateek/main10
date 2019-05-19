@@ -81,19 +81,21 @@
   </ion-slides>
   <ion-grid>
     <ion-row>
-      <ion-col class="border mar">
-
+      <ion-col class="border mar" style="background-image: url('../assets/imgs/spa.jpg'); opacity: 0.9; 
+      background-size: cover; width: 100%;">
+        <h1 align="center" style="color: #000; font-family: sans-serif;">Spa & Massage</h1>
       </ion-col>
-      <ion-col class="border">
-
+      <ion-col class="border" style="background-image: url('../assets/imgs/party.jpg');
+      background-size: cover; width: 100%;">
+        <h1 align="center" style="color: #000; font-family: sans-serif;">Party</h1>
       </ion-col>
     </ion-row>
   </ion-grid>
   <ion-grid>
     <ion-row>
-      <ion-col class="border" style="background-image: url('../assets/imgs/menu-img.jpg'); 
-      background-size: cover; width: 100%;">
-         <h1 align="center" style="color: white; font-family: cursive">Life Republic Social</h1>
+      <ion-col class="border" style="background-image: url('../assets/imgs/network.jpg'); 
+      background-size: contain; width: 100%;">
+        <h1 align="center" style="color: white; font-family: Arial, Helvetica, sans-serif;">Life Republic Social</h1>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -101,8 +103,8 @@
     <ion-card-header tappable (click)="collapseCard = !collapseCard">
       <ion-card-title>New Event</ion-card-title>
     </ion-card-header>
-    <ion-card-content *ngIf="!collapseCard">
- 
+    <ion-card-content *ngIf="collapseCard">
+
       <ion-item>
         <ion-input type="text" placeholder="Title" [(ngModel)]="event.title"></ion-input>
       </ion-item>
@@ -111,40 +113,46 @@
       </ion-item>
       <ion-item>
         <ion-label>Start</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime"
+          [min]="minDate"></ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label>End</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime"
+          [min]="minDate"></ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label>All Day?</ion-label>
         <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>
       </ion-item>
-      <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Add Event</ion-button>
- 
+      <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Add Event
+      </ion-button>
+
     </ion-card-content>
   </ion-card>
- 
+
   <ion-row>
     <!-- Change the displayed calendar mode -->
     <ion-col size="4">
-      <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'" (click)="changeMode('month')">Month</ion-button>
+      <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'"
+        (click)="changeMode('month')">Month</ion-button>
     </ion-col>
     <ion-col size="4">
-      <ion-button expand="block" [color]="calendar.mode == 'week' ? 'primary' : 'secondary'" (click)="changeMode('week')">Week</ion-button>
+      <ion-button expand="block" [color]="calendar.mode == 'week' ? 'primary' : 'secondary'"
+        (click)="changeMode('week')">Week</ion-button>
     </ion-col>
     <ion-col size="4">
-      <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">Day</ion-button>
+      <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">
+        Day</ion-button>
     </ion-col>
- 
+
     <!-- Move back one screen of the slides -->
     <ion-col size="6" text-left>
       <ion-button fill="clear" (click)="back()">
         <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-col>
- 
+
     <!-- Move forward one screen of the slides -->
     <ion-col size="6" text-right>
       <ion-button fill="clear" (click)="next()">
@@ -152,20 +160,40 @@
       </ion-button>
     </ion-col>
   </ion-row>
- 
-    <calendar 
-    [eventSource]="eventSource" 
-    [calendarMode]="calendar.mode" 
-    [currentDate]="calendar.currentDate"
-    (onEventSelected)="onEventSelected($event)"
-    (onTitleChanged)="onViewTitleChanged($event)"
-    (onTimeSelected)="onTimeSelected($event)" 
-    startHour="6"
-    endHour="20"
-    step="30"
-    startingDayWeek="1">
-    </calendar>
 
- 
- 
+  <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+    (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)"
+    (onTimeSelected)="onTimeSelected($event)" startHour="6" endHour="20" step="30" startingDayWeek="1" class="calendar">
+  </calendar>
+  <div class="greetings">Maintain is always with you, stay Happy, stay Safe !</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="section-end">
+          <i class="fas fa-car-crash"></i>
+      </ion-col>
+      <ion-col class="section-end">
+          <i class="fas fa-ambulance"></i>
+      </ion-col>
+      <ion-col class="section-end">
+          <i class="fas fa-broom"></i>
+      </ion-col>
+      <ion-col class="section-end">
+          <i class="fas fa-broom"></i>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="section-end left">
+         
+      </ion-col>
+      <ion-col class="section-end">
+          <i class="fas fa-bell"></i>
+      </ion-col>
+      <ion-col class="section-end">
+          <i class="fas fa-archway"></i>
+      </ion-col>
+      <ion-col class="section-end right">
+          
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

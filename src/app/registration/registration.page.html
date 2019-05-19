@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding class="theme">
+  <div class="main-content">
+    <div padding text-center class="container-logo">
+      <!-- <img src="assets/imgs/logo.png"> -->
+      <h1 class="title">Main 10</h1>
+    </div>
+
+    <div padding style="width: 100%;">
+      <form>
+        <ion-list class="curve">
+          <ion-item padding-right>
+            <ion-label>
+              <ion-icon ios="ios-person" md="md-person"></ion-icon>
+            </ion-label>
+            <ion-input id="username" type="text" required placeholder="Username *"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+            </ion-label>
+            <ion-input id="email" type="email" required placeholder="Email *"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon ios="ios-alert" md="md-alert"></ion-icon>
+            </ion-label>
+            <ion-input id="aadhar" type="number" required placeholder="Aadhar Number *"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon ios="ios-card" md="md-card"></ion-icon>
+            </ion-label>
+            <ion-input id="shopname" type="text" required placeholder="Shop Name *"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon ios="ios-home" md="md-home"></ion-icon>
+            </ion-label>
+            <ion-textarea class="address" id="address" rows="4" cols="20" placeholder="Address *"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon ios="ios-unlock" md="md-unlock"></ion-icon>
+            </ion-label>
+            <ion-input position="floating" id="password" type="password" required placeholder="Password *"></ion-input>
+            <ion-button type="button">
+              <ion-icon name="eye"></ion-icon>
+            </ion-button>
+          </ion-item>
+
+          <ion-item class="last_child">
+            <ion-label>
+              <ion-icon ios="ios-unlock" md="md-unlock"></ion-icon>
+            </ion-label>
+            <ion-input id="cnfpass" type="password" required placeholder="Confirm Password *"></ion-input>
+            <ion-button type="button">
+              <ion-icon name="eye"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-list>
+        <ion-button class="signup" color="primary">Sign up</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

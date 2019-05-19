@@ -113,7 +113,7 @@
     border-right: 2px solid rgb(140, 228, 222);
     border-bottom: 2px solid rgb(140, 228, 222);
     border-radius: 5px;
-    height: 7rem;
+    height: 9rem;
     width: auto;
 }
 
@@ -122,4 +122,47 @@
 }
 table {
     height: 20%;
+}
+
+.greetings {
+    height: auto;
+    background-color: skyblue;
+    color: white;
+    text-align: center; 
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 5px;
+    padding: 0.5em;
+    overflow: auto;
+}
+
+.section-end {
+    border: 1px solid rgb(8, 175, 164);
+    border-radius: 5px;
+    height: 5em;
+}
+.section-end.left {
+    border-bottom-style: none;
+    border-left-style: none;
+}
+.section-end.right {
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+i {
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    margin: 0.2em;
+}
+
+.calendar {
+    max-height: 20em;
+    margin: 0%;
+}
+
+div.monthview-container {
+    margin: 0%;
+    padding: 0%
 }
